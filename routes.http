@@ -1,0 +1,17 @@
+
+POST http://localhost:3000/users/register
+Content-Type: application/json
+
+{}
+
+###
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{}
+###
+@baseUrl = http://localhost:3000
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGE4ZjY0ZDQ1MDdkY2M3ZDJhODliY2IiLCJpYXQiOjE3NTU5MDM2MDYsImV4cCI6MTc1NTkwNzIwNn0.85_pyMaAWh5YsXf8nTaeze8ssI30YomC_iHMipJMKXk
+GET {{baseUrl}}/users/list-users
+Content-Type: application/json
+Authorization: Bearer {{token}}
